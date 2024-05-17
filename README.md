@@ -41,6 +41,10 @@
 4. **Set up environment variables**:
 
    - Create a `.env` file based on the `.env.example` file provided.
+   - Edit your postgres password in the `.env` file
+   - You may need to setup prisma with `npx migrate prisma` or
+     ```bash
+     mkdir -p prisma/migrations/init\nnpx prisma migrate diff --from-empty --to-schema-datamodel prisma/schema.prisma --script > prisma/migrations/init/migration.sql\nnpx prisma migrate resolve --applied init\nnpx prisma migrate dev```
    - (Reach out to @casesandberg to get the shared dev env if you wish)
 
 5. **Start development servers**:
