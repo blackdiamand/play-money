@@ -1,3 +1,4 @@
+// @ts-ignore
 import zod from 'zod'
 import db from '@play-money/database'
 import { _UserModel } from '@play-money/database'
